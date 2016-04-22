@@ -16,8 +16,7 @@
             dataType: 'jsonp',
             success: function(source) {
                 // Got the data - parse it and return the temperature
-                var newScript = source;
-                callback(newScript);
+                callback(source);
             }
       });
     };
