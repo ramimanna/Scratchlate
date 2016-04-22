@@ -18,7 +18,7 @@
             success: function(source) {
                 // Got the data - parse it and return the temperature
                 console.log(source);
-                callback(source);
+                callback(source["data"]["translations"][0]["translatedText"]);
             }
       });
     };
