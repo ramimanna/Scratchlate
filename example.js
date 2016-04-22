@@ -13,8 +13,8 @@
       console.log('https://www.googleapis.com/language/translate/v2?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&source=en&target='+language[target_language]+'&callback=translateText&q=' + text);      
       // Make an AJAX call to the Open Weather Maps API
       $.ajax({
-            url: 'https://www.googleapis.com/language/translate/v2?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&source=en&target='+language[target_language]+'&callback=translateText&q=' + text,
-            dataType: 'jsonp',
+            url: 'https://www.googleapis.com/language/translate/v2?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&source=en&target='+language[target_language]+'&q=' + text,
+            dataType: 'json',
             success: function(source) {
                 // Got the data - parse it and return the temperature
                 console.log(source);
