@@ -31,6 +31,7 @@
       for (lang in language){
         code_to_lang[language[lang]] = lang;
       };
+      console.log(code_to_lang);
       $.ajax({
             url:'https://www.googleapis.com/language/translate/v2/detect?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&q='+text,
             dataType: 'json',
