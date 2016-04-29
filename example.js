@@ -37,7 +37,7 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-          ['R', '%s in %m.languages','get_translation','hello world','Spanish']
+          ['R', '%s in %m.languages','get_translation','hello world','Spanish'],
           ['R', 'Detect Language of %s','get_language', 'hello world']
         ],
         menus: {
