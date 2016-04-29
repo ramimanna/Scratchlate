@@ -31,8 +31,6 @@
             dataType: 'json',
             success: function(source) {
                 // Got the data - parse it and return the temperature
-                console.log(source["data"]["detections"]);
-                debugger;
                 callback(source["data"]["detections"][0][0]["language"]);
             }
       });      
