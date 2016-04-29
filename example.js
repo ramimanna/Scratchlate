@@ -29,6 +29,8 @@
             dataType: 'json',
             success: function(source) {
                 // Got the data - parse it and return the temperature
+                console.log(text);
+                console.log('https://www.googleapis.com/language/translate/v2/detect?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&q='+text);                
                 console.log(source);
                 callback(source["data"]["detections"][0]["language"]);
             }
