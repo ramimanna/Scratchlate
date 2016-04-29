@@ -23,10 +23,22 @@
             }
       });
     };
+    ext.get_language = function(text, callback) {
+      $.ajax({
+            url:'https://www.googleapis.com/language/translate/v2/detect?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&q='+text,
+            dataType: 'json',
+            success: function(source) {
+                // Got the data - parse it and return the temperature
+                console.log(source);
+                callback(source["data"]["detections"][0]["language"]);
+            }
+      });      
+    };
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
           ['R', '%s in %m.languages','get_translation','hello world','Spanish']
+          ['R', 'Detect Language of %s','get_language', 'hello world']
         ],
         menus: {
             languages: ['Spanish','Arabic','Hebrew']
