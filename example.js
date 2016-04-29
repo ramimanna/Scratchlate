@@ -45,7 +45,7 @@
     var descriptor = {
         blocks: [
           ['R', '%s in %m.languages','get_translation','hello world','Spanish'],
-          ['R', 'Detect Language of %s','get_language', 'hello world']
+          ['R', 'detect language of %s','get_language', 'hello world']
         ],
         menus: {
             languages: ['Spanish','Arabic','Hebrew']
