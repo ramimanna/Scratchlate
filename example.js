@@ -15,7 +15,7 @@
       //var source_language
       // Make an AJAX call to the Open Weather Maps API
       $.ajax({
-            url: 'https://www.googleapis.com/language/translate/v2?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&source=auto&target='+ext.language[target_language]+'&q=' + text,
+            url: 'https://www.googleapis.com/language/translate/v2?key=AIzaSyCRXDflkdRiEhQ-JLMwzuSsq2O55aWZ8-0&target='+ext.language[target_language]+'&q=' + text,
             dataType: 'json',
             success: function(source) {
                 // Got the data - parse it and return the temperature
